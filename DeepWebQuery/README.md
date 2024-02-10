@@ -42,11 +42,7 @@
 
 To get the project up and running, you'll need to set up your environment and install the necessary dependencies. You can do this in two ways:
 
-### Option 1: Using the Parent Directory Instructions
-
-Follow the instruction on the [parent directory](https://github.com/Farzad-R/LLM-playground/tree/master) to create an environment and install required libraries. 
-
-### Option 2: Installing Dependencies Individually
+Installing Dependencies Individually
 If you prefer to install the dependencies individually, run the following command:
 
 ```
@@ -70,16 +66,3 @@ The project includes an automatic directory creation feature within the DeepWebQ
 
 1. `memory`: This directory is designed to store essential information for each user session. It will create and maintain a separate CSV file for each session, preserving the chat history.
 2. `vectordb`: This directory is dedicated to holding chromaDB folders, each corresponding to a specific URL requested by the user. At the onset of each session, this folder is regenerated, ensuring a clean slate. Any existing vectorDBs from previous sessions are automatically purged to maintain a tidy and up-to-date workspace.
-
-YouTube video:
-- [Link](Coming soon)
-
-Slides:
-- [Link](https://github.com/Farzad-R/LLM-Zero-to-Hundred/blob/master/presentation/slides.pdf)
-
-Extra read:
-- [GPT model](https://platform.openai.com/docs/models/overview) 
-- [duckduckgo-search](https://pypi.org/project/duckduckgo-search/)
-- [chainlit](https://docs.chainlit.io/get-started/overview)
-
-
