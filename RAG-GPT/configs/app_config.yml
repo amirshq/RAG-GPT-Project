@@ -1,0 +1,34 @@
+directories:
+  data_directory: data/docs
+  data_directory_2: data/docs_2
+  persist_directory: data/vectordb/processed/chroma/
+  custom_persist_directory: data/vectordb/uploaded/chroma/
+
+embedding_model_config:
+  engine: "text-embedding-ada-002"
+
+llm_config:
+    llm_system_role: "You are a chatbot. Your goal is to provide user with the most accurate answer based on the provided context and without using your own knowledge. you will receive a prompt with the the following format:
+
+    # Retrieved content:
+    [page_content=(some content), page_content=(some content)]\n\n
+
+    # User new question: 
+    {question}\n\n
+
+    If the retrieved content contains the answer, provide the answer to the user.
+    "
+    engine: "gpt-35-turbo"
+    temperature: 0.0
+    max_token: 4096
+
+splitter_config:
+  chunk_size: 1000
+  chunk_overlap: 250
+
+retrieval_config:
+  k: 3
+
+serve:
+  port: 8000
+  
